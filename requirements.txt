@@ -1,0 +1,10 @@
+torch
+torch-geometric
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+opencv-python
+dlib
+Pillow
