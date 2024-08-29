@@ -13,6 +13,6 @@ dependencies:
       - numpy
       - scikit-learn
       - matplotlib
-      - opencv-python
+      - opencv-python-headless
       - dlib
       - Pillow
