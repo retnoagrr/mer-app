@@ -4,15 +4,13 @@ channels:
 dependencies:
   - python=3.8
   - cmake  # Ensure CMake is available for dlib
-  - pip
-  - pip:
-      - torch
-      - torch-geometric
-      - streamlit
-      - pandas
-      - numpy
-      - scikit-learn
-      - matplotlib
-      - opencv-python-headless
-      - dlib
-      - Pillow
+  - torch
+  - torch-geometric
+  - streamlit
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - opencv-python-headless
+  - dlib
+  - Pillow
