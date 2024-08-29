@@ -3,17 +3,16 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.8  # Specify your Python version
-  - pip  # Make sure pip is installed
+  - python=3.8  # or your specific Python version
+  - pip
   - pip:
-      - torch  # Install PyTorch via pip
+      - torch
       - torch-geometric
       - streamlit
       - pandas
       - numpy
       - scikit-learn
       - matplotlib
-      - opencv-python  # Install opencv-python via pip
+      - opencv-python-headless  # Use headless version to avoid GUI issues
       - dlib
       - Pillow
-      - scikit-image  # Sometimes opencv-python requires this
