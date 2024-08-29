@@ -368,14 +368,14 @@ import dlib
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 magnet = MagNet().to(device)
-magnet.load_state_dict(torch.load("weight\magnet_epoch12_loss7.28e-02 (3).pth", map_location=device))  # Ensure the model is loaded
+magnet.load_state_dict(torch.load(r"weight\magnet_epoch12_loss7.28e-02 (3).pth", map_location=device))  # Ensure the model is loaded
 
 EYEBROW_INDEX = (17, 27)
 MOUTH_INDEX = (48, 68)
 MAX_EDGES = 1500  # Based on MEDataset
 
 # Initialize the dlib face detector and shape predictor
-PREDICTOR_PATH = "weight\shape_predictor_68_face_landmarks.dat"
+PREDICTOR_PATH = r"weight\shape_predictor_68_face_landmarks.dat"
 predictor = dlib.shape_predictor(PREDICTOR_PATH)
 detector = dlib.get_frontal_face_detector()
 
@@ -503,8 +503,8 @@ def detect_landmarks(img):
     return [(p.x, p.y) for p in landmarks.parts()]
 
 # Load the pre-trained model and adjacency matrix
-model_path = "weight\model_best.pt"
-adj_matrix_path = "weight\4.npz"
+model_path = r"weight\model_best.pt"
+adj_matrix_path = r"weight\4.npz"
 
 npz_file = np.load(adj_matrix_path)
 adj_matrix = torch.FloatTensor(npz_file["adj_matrix"]).to(device)
@@ -613,9 +613,9 @@ def predict_emotion(onset_img_path, apex_img_path):
 
 
 # Set file paths
-PREDICTOR_PATH = "weight\shape_predictor_68_face_landmarks.dat"
-model_path = "weight\model_best.pt"
-adj_matrix_path = "weight\4.npz"
+PREDICTOR_PATH = r"weight\shape_predictor_68_face_landmarks.dat"
+model_path = r"weight\model_best.pt"
+adj_matrix_path = r"weight\4.npz"
 
 # Load model and predictor
 predictor = dlib.shape_predictor(PREDICTOR_PATH)
