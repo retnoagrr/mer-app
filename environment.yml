@@ -2,8 +2,8 @@ name: my-streamlit-app
 channels:
   - conda-forge
 dependencies:
-  - python=3.8  # or your specific Python version
-  - cmake  # Add CMake for dlib installation
+  - python=3.8
+  - cmake  # Ensure CMake is available for dlib
   - pip
   - pip:
       - torch
@@ -13,6 +13,7 @@ dependencies:
       - numpy
       - scikit-learn
       - matplotlib
-      - opencv-python-headless  # Use the headless version to avoid GUI issues
+      - opencv-python-headless
       - dlib
       - Pillow
+  - cudatoolkit=none  # Ensures CUDA toolkit is not installed or attempted
