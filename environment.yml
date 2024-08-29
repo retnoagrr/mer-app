@@ -2,15 +2,17 @@ name: my-streamlit-app
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
-  - cmake  # Ensure CMake is available for dlib
-  - torch
-  - torch-geometric
-  - streamlit
-  - pandas
-  - numpy
-  - scikit-learn
-  - matplotlib
-  - opencv-python-headless
-  - dlib
-  - Pillow
+  - python=3.8  # or your specific Python version
+  - cmake  # Add CMake for dlib installation
+  - pip
+  - pip:
+      - torch
+      - torch-geometric
+      - streamlit
+      - pandas
+      - numpy
+      - scikit-learn
+      - matplotlib
+      - opencv-python-headless  # Use the headless version to avoid GUI issues
+      - dlib
+      - Pillow
