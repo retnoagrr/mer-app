@@ -3,11 +3,11 @@ channels:
   - conda-forge
   - pytorch
 dependencies:
-  - python=3.8  # or the version you are using
+  - python=3.8  # or your specific Python version
   - pip
+  - pytorch::pytorch  # Install PyTorch via conda's PyTorch channel
   - pip:
-      - torch
-      - torch-geometric
+      - torch-geometric  # This will be installed via pip
       - streamlit
       - pandas
       - numpy
