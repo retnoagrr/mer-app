@@ -16,4 +16,3 @@ dependencies:
       - opencv-python-headless
       - dlib
       - Pillow
-  - cudatoolkit=none  # Ensures CUDA toolkit is not installed or attempted
