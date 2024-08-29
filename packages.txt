@@ -1,1 +1,6 @@
 cmake
+cmake
+libx11-dev
+pkg-config
+libopenblas-dev
+liblapack-dev
